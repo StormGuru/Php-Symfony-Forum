@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Topic{% endblock %}
+
+{% block body %}
+<div class="topic">
+<div class="top_autor">{{topic.getAutor.login}}</div>
+<div class="top_body">
+<div><span>{{topic.getCreatedAt|date}}</span></div>
+<h3 class="top_title">{{topic.title}}</h3>
+<div class="top_text">{{topic.text}}</div>
+</div>
+</div>
+<div class="comment">
+<div>Your comment:</div>
+<form action="{{path('app_addcomment')}}" method="post">
+<textarea  name="comment_text"> Comment </textarea>
+<input type="hidden" name="topic_id" value="{{topic.id}}">
+<p><button type="submit" class="add_comm">Add comment</button></p>
+</form>
+</div>
+{% for comment in topic.getComments%}  
+<div class="topic2">
+<div class="top_autor">{{comment.getCommentator.login}}</div>
+<div class="top_body">
+<div><span>{{comment.created|date}}</span></div>
+<div class="top_text">{{comment.text}}</div>
+</div>
+</div>
+{%endfor%}
+{% endblock %}

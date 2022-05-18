@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{subforum.subforum}}{% endblock %}
+
+{% block body %}
+    <div class="content">
+      <div class="list">
+       <h1 class="subforum">{{subforum.subforum}}</h1>
+        {% for topic in subforum.getTopics %}
+        <div class="category">
+          <div><a href="{{path('app_topic', {'id': topic.id})}}"><h3>{{topic.title}}</a></h3></div> 
+          <div><b>{{topic.getComments|length}}</b> messages</div>
+          <div>created at {{topic.getCreatedAt|date}}  <p> by <b>{{topic.getAutor.login}}</b></p></div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+{% endblock %}

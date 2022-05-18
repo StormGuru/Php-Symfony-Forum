@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdminController!{% endblock %}
+
+{% block body %}
+<div class="wrapper">
+<div class="sb">
+<div class="panel">AdminPanel</div>
+<div class="adm_log">Admin: {{admin.login}}</div>
+<div><a href="{{path('app_admin-users')}}">Users</a></div>
+<div><a href="{{path('app_admin-forums')}}">Forums</a></div>
+<div><a href="{{path('app_admin_subforums')}}">Subforums</a></div>
+<div><a href="{{path('app_admin_topics')}}">Topics</a></div>
+<div><a href="{{path('app_admin_comments')}}">Comments</a></div>
+</div>
+<div class="adm_content">
+<div class="adm_form">
+<form method="post" action="{{path('app_admin_s_forum', {'id': forum.id})}}">
+<p><input type="text" name="edit_forum" value="{{forum.keywords}}"></p>
+<button type="submit" class="add_comm">Add</button>
+</form>
+</div>
+</div>
+
+
+</div>
+{% endblock %}

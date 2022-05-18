@@ -1,0 +1,230 @@
+
+*{
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+header{
+    background-color: black; 
+    color: white;
+}
+.head{
+   margin: 0;
+   padding-bottom: 18px;
+   display: flex;
+   justify-content: space-between;
+}
+.logo{
+    padding: 5px 20px 0px 20px;
+    font-weight: 700;
+    font-size: 240%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.logo a{
+    color: white;
+}
+.sign{
+    padding: 10px 20px 0px 20px; 
+    margin:15px 10px 0px 10px;
+}
+.sign a{
+    margin-right: 10px;
+    padding: 3px 24px 6px 30px;
+    border: 1px solid white;
+    border-radius: 6px;
+    color: black;
+    background-color: white;
+    font-weight: 500;
+}
+.sign a:hover{
+    background-color: rgb(74, 74, 203);
+}
+.tagline{
+    text-align: center;
+    padding-top: 35px;
+    font-size: large;
+}
+.content{
+    width:60%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+.category{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(206, 204, 204);
+}
+footer{
+    width:100%;
+}
+.footer{
+    background-color: black; 
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.foot_ul li{
+    display:inline-block;
+   padding:10px;
+}
+/*forum.index*/
+.welcome{
+    font-size: 300%;
+    padding: 20px 0;
+}
+.maincategory{
+    background-color: black;
+    color: white;
+    font-weight: 500;
+    padding: 8px 15px;
+}
+.category{
+    padding: 8px 15px;
+}
+.category a{
+    color: black;
+}
+/*subforum.index*/
+.subforum{
+    padding:15px;
+}
+/*topic*/
+.topic{
+    border-bottom: 2px solid black;
+    margin:30px 20px;
+    display: flex;
+}
+.topic2{
+    border-bottom: 1px solid rgb(210, 207, 207);
+    margin:30px 20px;
+    display: flex;
+}
+.topic span{
+    margin-right: 10px;
+    text-decoration: underline;
+}
+.top_title{
+    padding: 10px;
+    margin: 10px 0;
+    border-bottom: 1px solid rgb(117, 114, 114);
+}
+.top_text{
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.top_autor{
+    background-color: black;
+    color: white;
+    padding: 10px 30px;
+    text-decoration: underline;
+}
+.top_body{
+    padding:10px 20px ;
+}
+.comment{
+    margin:20px;
+}
+.comment textarea{
+ width: 800px;
+ height: 100px;
+ margin-top: 10px;
+}
+.add_comm{
+    background-color: black;
+    border: 1px solid black;
+    padding: 8px 20px;
+    border-radius: 10px;
+    color: white;
+    margin: 10px;
+}
+.input{
+    width:350px;
+    border-radius: 5px;
+    padding: 5px 15px;
+    margin: 15px;
+}
+.textarea{
+   width: 500px; 
+   height: 100px;
+   margin: 5px;
+}
+/*profile*/
+.p_login{
+    margin-bottom: 30px;
+}
+.numb{
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 1px 10px;
+}
+.top_body a{
+    color: red;
+}
+/*admin*/
+.wrapper{
+    display: flex;
+}
+.wrapper a{
+    color: black;
+}
+.sb{
+    width: 20%;
+    padding: 0 30px 30px 0px;
+    font-size: large;
+    margin-bottom: 60px;
+}
+.sb div{
+  padding: 9px 30px;
+}
+.sb .panel{
+    background-color: black;
+    color: white;
+    padding-bottom: 20px;
+    font-size: 140%;
+}
+.sb .adm_log{
+    padding: 20px 30px;
+    border-bottom: 1px solid rgb(187, 184, 184);
+}
+.adm_welcome{
+    font-size: 400%;
+    text-align: center;
+    margin: 0 auto;
+    color: rgb(203, 206, 209);
+    padding: 50px 0;
+}
+.adm_content th, td{
+    padding: 5px 10px;
+    width: 150px;
+    text-align: center;
+}
+.green a{
+    color:forestgreen;
+}
+.red a{
+    color: red;
+}
+.add_btn{
+    width: 100px;
+    padding: 5px 10px;
+    background-color: green;
+    margin-top: 10px;
+    border: 1px solid green;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+}
+.adm_form{
+    margin: 20px;
+}
+.adm_form input{
+    width: 300px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}

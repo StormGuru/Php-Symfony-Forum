@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProfileController!{% endblock %}
+
+{% block body %}
+<h1>My profile</h1>
+<div class="p_login"> Login: <h2>{{user.login}}</h2> </div>
+<div>My publications: <span class="numb">{{user.getTopics|length}}</span></div>
+
+{% for topic in user.getTopics %}
+<div class="topic">
+<div><span class="top_autor">{{topic.getAutor.login}}</span>
+</div>
+<div class="top_body">
+<div>{{topic.getCreatedAt|date}}</div>
+<div class="top_title"><h3>{{topic.title}}</h3></div>
+<div class="top_text">{{topic.text}}</div>
+<div><span><a href="{{path('app_topic_edit', {'id': topic.id})}}">Edit</a></span><span><a href="{{path('app_topic_delete', {'id': topic.id})}}">Delete</a></span></div>
+</div>
+</div>
+{% endfor %}
+{% endblock %}

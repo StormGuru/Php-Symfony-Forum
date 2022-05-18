@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Topic{% endblock %}
+
+{% block body %}
+<h2>Edit topic</h2>
+<form action="{{path('app_topic_save', {'id': edit_topic.id})}}" method="post">
+<p><input type="text" name="topic_title" value="{{edit_topic.title}}" class="input"></p>
+<textarea name="topic_text" value="{{edit_topic.text}}" class="textarea">{{edit_topic.text}}</textarea>
+<p><button type="submit" class="add_comm"> Save </button><p>
+</form>
+
+{% endblock %}

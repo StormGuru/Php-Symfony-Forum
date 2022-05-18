@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Название!{% endblock %}
+
+{% block body %}
+{#{{dump(s_forums)}}#}
+    <div class="content">
+      <p class="welcome">Welcome to forum!</p>
+      {% for forum in forums%}
+      <div class="list">
+        <h2 class="maincategory">{{forum.keywords}}</h2>
+        {% for s_forum in forum.getSubforums %}
+        <div class="category">
+          <div><a href="{{path('app_sub_forum', {'id': s_forum.id})}}"><h3>{{s_forum.subforum}}</a></h3></div> 
+          <div><b>{{s_forum. getTopics|length}}</b> topics</div>
+        </div>
+        {%endfor%}
+        {%endfor%}
+      </div>
+    </div>
+{% endblock %}

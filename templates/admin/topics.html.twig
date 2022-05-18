@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdminController!{% endblock %}
+
+{% block body %}
+<div class="wrapper">
+<div class="sb">
+<div class="panel">AdminPanel</div>
+<div class="adm_log">Admin: {{admin.login}}</div>
+<div><a href="{{path('app_admin-users')}}">Users</a></div>
+<div><a href="{{path('app_admin-forums')}}">Forums</a></div>
+<div><a href="{{path('app_admin_subforums')}}">Subforums</a></div>
+<div><a href="{{path('app_admin_topics')}}">Topics</a></div>
+<div><a href="{{path('app_admin_comments')}}">Comments</a></div>
+</div>
+<div class="adm_content">
+<a href="{{path('app_admin_add_topic')}}"><div class="add_btn">Add new</div></a>
+<table>
+ <tr>
+  <th>ID</th>
+  <th>CATEGORY</th>
+  <th>TITLE</th>
+  <th>TEXT</th>
+  <th>AUTOR</th>
+  <th>EDIT</th>
+  <th>DELETE</th>
+ </tr>
+ {% for topic in topics%}
+ <tr>
+ <td>{{topic.id}}</td>
+  <td>{{topic.getSubforumId.subforum}}</td>
+  <td>{{topic.title}}</td>
+   <td>{{topic.text}}</td>
+  <td>{{topic.getAutor.login}}</td>
+  <td class="green"><a href="{{path('app_admin_edit_topic', {'id': topic.id})}}"> Edit </td>
+  <td class="red"><a href="{{path('app_admin_delete_topic', {'id': topic.id})}}" > Delete </td>
+ </tr>
+ {% endfor %}
+</table>
+</div>
+
+
+</div>
+{% endblock %}
